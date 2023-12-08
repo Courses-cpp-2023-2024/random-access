@@ -68,8 +68,9 @@ struct tree {
         // реализовать проверку на попытку получения элемента за пределами
         // индексов дерева
         [[nodiscard]] int const &at() const {
-            // if (index out of range condition)
-            //  throw std::out_of_range("index out of range");
+            if (p == nullptr) {
+        throw std::out_of_range("index out of range");
+            }
             return p->value;
         }
 
