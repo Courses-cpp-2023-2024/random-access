@@ -3,7 +3,6 @@
 #include <utility>
 #include <vector>
 
-
 auto tree::begin() const -> iterator {
     if (empty()) return end();
     auto it = iterator{root.get(), 0};
