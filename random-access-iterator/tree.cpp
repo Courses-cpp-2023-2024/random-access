@@ -33,6 +33,7 @@ reference tree_iterator::at(size_t n) const {
     return *current;
 }
 
+
 tree::iterator& tree::iterator::operator+(ptrdiff_t diff) {
     if (diff > 0) {
         size_t target_index = static_cast<size_t>(index + diff);
